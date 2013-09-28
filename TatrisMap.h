@@ -1,11 +1,11 @@
-#ifndef _TETRIS_MAP_H
-#define _TETRIS_MAP_H
+#ifndef _TATRIS_MAP_H
+#define _TATRIS_MAP_H
 #include <common.h>
-class TetrisMap
+class TatrisMap
 {
 public:
-    TetrisMap(int width, int height);
-    ~TetrisMap();
+    TatrisMap(int width, int height);
+    ~TatrisMap();
     bool updateMap(Coord *before, Coord *after, int count);
     bool clear();
 public:

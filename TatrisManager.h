@@ -1,7 +1,8 @@
 #ifndef _TATRIS_MANAGER_H
 #define _TATRIS_MANAGER_H
-#include <TatrisObject.h>
-#include <EventObject.h>
+#include <TatrisEvent.h>
+
+class TatrisObject;
 
 class TatrisManager
 {
@@ -9,7 +10,7 @@ public:
     TatrisManager(int width, int height);
     ~TatrisManager();
     bool updateMap();
-    bool eventHandler(EventTask *task);
+    bool eventHandler(TatrisEventInfo *task);
     bool pause();
     bool restart();
     bool start();
@@ -22,6 +23,6 @@ private:
     char *_username;
     TatrisObject *_current;
     TatrisObject *_next;
-    EventObject *_event;
+    TatrisEvent *_event;
 };
 #endif
